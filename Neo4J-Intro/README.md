@@ -154,7 +154,7 @@ Well, there you have it! A beginner article to start with Neo4J. More interactiv
 
 
 **Reference**
-[https://neo4j.com/developer/graph-database/](https://neo4j.com/developer/graph-database/)
-[https://neo4j.com/labs/](https://neo4j.com/labs/)
-[https://neo4j.com/developer/](https://neo4j.com/developer/)
-[https://neo4j.com/graphacademy/online-training/introduction-to-neo4j/part-2/](https://neo4j.com/graphacademy/online-training/introduction-to-neo4j/part-2/)
+- [https://neo4j.com/developer/graph-database/](https://neo4j.com/developer/graph-database/)
+- [https://neo4j.com/labs/](https://neo4j.com/labs/)
+- [https://neo4j.com/developer/](https://neo4j.com/developer/)
+- [https://neo4j.com/graphacademy/online-training/introduction-to-neo4j/part-2/](https://neo4j.com/graphacademy/online-training/introduction-to-neo4j/part-2/)
