@@ -53,7 +53,7 @@ AWS Cloudformation template is provided to facilitate the deployment. The resour
 ### Testing the Example
 Now go to the Slack app and go to `#random` channel. Upload an image and you would find your app identifying animals in it. 
 
-![Test run](https://findceleb1.s3-us-west-2.amazonaws.com/img/screen1.png)
+![Test run](https://findceleb1.s3-us-west-2.amazonaws.com/img/results.png)
 
 
 ## Cleaning Up 

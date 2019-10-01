@@ -27,7 +27,7 @@ After polling the Youtube API, save those results in Google Sheets to facilitate
 
 ### Neo4J Database
 
-[![N|Solid](https://findceleb1.s3-us-west-2.amazonaws.com/img/DB1.png)](https://raw.githubusercontent.com/SSMalvika/CodeBuffalo-2019/master/assets/img/DB1.png)
+[![N|Solid](https://findceleb1.s3-us-west-2.amazonaws.com/img/DB1.png)](https://findceleb1.s3-us-west-2.amazonaws.com/img/DB1.png)
 
 We'll make use of the Neo4j 3.5 Blank Sandbox, which is populated with the youtube dataset.
 
@@ -181,7 +181,7 @@ Run the following schemas to get required results
 
 The React app acts like a random choice selector for the choice of the user (Illusion of choice). The user can choose a category and random boredom killing videos would be populated in the next page. 
 
-[![N|Solid](https://findceleb1.s3-us-west-2.amazonaws.com/img/r1.png)](https://raw.githubusercontent.com/SSMalvika/CodeBuffalo-2019/master/assets/img/r1.png)
+[![N|Solid](https://findceleb1.s3-us-west-2.amazonaws.com/img/r1.png)](https://findceleb1.s3-us-west-2.amazonaws.com/img/r1.png)
 
 This is the comprehensive look and feel of the app. There would be multitudes of random videos that has selective information like title, description, relative freshness(year), Likes, dislikes, views, comments etc. The React-Iframe has the capability to play video within the virtual platform. Also, most likely recommendable videos are populated in the lower part of the video. 
 
