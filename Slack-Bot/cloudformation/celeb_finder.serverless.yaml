@@ -1,0 +1,112 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Outputs:
+  RequestURL:
+    Description: Prod URL for API to use as Request URL for Slack app
+    Value:
+      Fn::Sub: https://${CelebFinderAPI}.execute-api.${AWS::Region}.amazonaws.com/Prod/
+Parameters:
+  AccessToken:
+    Description: Slack OAuth access
+    NoEcho: true
+    Type: String
+  VerificationToken:
+    Description: Slack Verification token
+    NoEcho: true
+    Type: String
+Resources:
+  CelebFinderAPI:
+    Properties:
+      DefinitionBody:
+        basePath: /Prod
+        definitions:
+          Empty:
+            title: Empty Schema
+            type: object
+        info:
+          title:
+            Ref: AWS::StackName
+          version: '2017-06-11T02:20:25Z'
+        paths:
+          /:
+            post:
+              produces:
+              - application/json
+              responses:
+                '200':
+                  description: 200 response
+                  schema:
+                    $ref: '#/definitions/Empty'
+              x-amazon-apigateway-integration:
+                contentHandling: CONVERT_TO_TEXT
+                httpMethod: POST
+                passthroughBehavior: when_no_match
+                responses:
+                  default:
+                    statusCode: '200'
+                type: aws
+                uri:
+                  Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CelebFinderFunction.Arn}/invocations
+        schemes:
+        - https
+        swagger: '2.0'
+      StageName: Prod
+    Type: AWS::Serverless::Api
+  CelebFinderFunction:
+    Properties:
+      CodeUri: 's3://findceleb1/lambda-method/celeb_finder.zip'
+      Description: Checks Slack message
+      Environment:
+        Variables:
+          ACCESS_TOKEN:
+            Ref: AccessToken
+          VERIFICATION_TOKEN:
+            Ref: VerificationToken
+      Events:
+        CelebFinderAPIPost:
+          Properties:
+            Method: post
+            Path: /
+            RestApiId:
+              Ref: CelebFinderAPI
+          Type: Api
+      Handler: celeb_finder.lambda_handler
+      Role:
+        Fn::GetAtt:
+        - LambdaRekognitionRole
+        - Arn
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+  LambdaRekognitionRole:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Action:
+          - sts:AssumeRole
+          Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Sid: AllowLambdaServiceToAssumeRole
+        Version: '2012-10-17'
+      Path: /
+      Policies:
+      - PolicyDocument:
+          Statement:
+          - Action:
+            - rekognition:DetectLabels
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: RekognitionDetectLabels
+      - PolicyDocument:
+          Statement:
+          - Action:
+            - logs:CreateLogStream
+            - logs:CreateLogGroup
+            - logs:PutLogEvents
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: WriteToCWLogs
+    Type: AWS::IAM::Role
+Transform: AWS::Serverless-2016-10-31

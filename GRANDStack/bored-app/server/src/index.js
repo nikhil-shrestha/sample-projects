@@ -15,10 +15,9 @@ const { makeAugmentedSchema } =require("neo4j-graphql-js")
 
 
 const driver = neo4j.driver(
-  "bolt://52.91.116.38:39540",
   neo4j.auth.basic(
-   "neo4j",
-    "interrelation-discharges-overload"
+   "username",
+    "pwd"
   )
 );
 
