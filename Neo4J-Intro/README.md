@@ -1,6 +1,6 @@
 # Neo4J - Certification 
 
-![alt text](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20140926224303/neo4j_logo-facebook.png)
+![alt text](https://github.com/davidjegan/serverlessguru-david/blob/master/Neo4J-Intro/img/logo.png)
 
 
 
@@ -30,7 +30,7 @@ Hello! This article would assist you to take on the Neo4J certification, as this
 - The Neo4j Sandbox can be created, over the Internet, in-order to work with the Database, This is a temporary Neo4j instance that is available for 3 days, but you can extend it to 10 days.
 
 
-![alt text](https://static.sharpnotions.com/wp-content/uploads/neo4j-sandbox-details-panel.png)
+![alt text](https://github.com/davidjegan/serverlessguru-david/blob/master/Neo4J-Intro/img/desk.png)
 
 - Bolt protocol is used by applications to Neo4J db
 - The visualizations can be exported in PNG, SVG and CSV format
@@ -46,7 +46,7 @@ Hello! This article would assist you to take on the Neo4J certification, as this
 		- Similarity – these algorithms help calculate the similarity of nodes
 
 
-![alt text](https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/desktop_mainscreen.png)
+![alt text](https://github.com/davidjegan/serverlessguru-david/blob/master/Neo4J-Intro/img/desk1.png)
 
 - We can create multiple projects, each with their own database or set of databases, but only one database can be started at a time.
 
@@ -111,6 +111,10 @@ Cypher is Neo4j’s graph query language that allows users to store and retrieve
 
 
 ## Data Model
+
+![alt text](https://github.com/davidjegan/serverlessguru-david/blob/master/Neo4J-Intro/img/desk2.png)
+
+
 The four building blocks of a Neo4j Graph Database are
 -	Nodes
 -	Relationships
