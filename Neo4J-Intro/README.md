@@ -151,6 +151,7 @@ Nodes are connected by relationships. Thus Foreign keys are not needed to decide
 
 Well, there you have it! A beginner article to start with Neo4J. More interactive workspaces to be added in the subsequent articles. 
 
+Just try how good you fare after reading this article using this link https://neo4j.com/graphacademy/neo4j-certification/. 
 
 
 **Reference**
