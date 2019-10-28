@@ -10,7 +10,7 @@ A video recommender acting as an intermediate between Youtube and you to kill yo
 
 
 ## Architecture 
-[![N|Solid](https://findceleb1.s3-us-west-2.amazonaws.com/img/ArchitectureGRAND.png)](https://raw.githubusercontent.com/SSMalvika/CodeBuffalo-2019/master/assets/img/Architecture.png)
+[![N|Solid](https://image.slidesharecdn.com/neo4j-graphql-171114171651/95/full-stack-development-with-neo4j-and-graphql-21-638.jpg)]
 
 
 ## Methodology
